@@ -14,6 +14,9 @@ COMPILE_FLAGS = -std=c++14 -Wall -Wextra -g
 INCLUDES = -I include/ -I /usr/local/include/eigen3
 LIBS =
 
+DESTDIR := 
+PREFIX := /usr/local
+
 .PHONY: default_target
 default_target: release
 
@@ -33,6 +36,11 @@ clean:
 
 .PHONY: all
 all: $(BIN_PATH)/$(BIN_NAME)
+
+.PHONY: install
+install: $(BIN_PATH)/$(BIN_NAME)
+	install -d $(DESTDIR)$(PREFIX)/bin
+	install -m 755 $(BIN_PATH)/$(BIN_NAME) $(DESTDIR)$(PREFIX)/bin/
 
 # Creation of the executable
 $(BIN_PATH)/$(BIN_NAME): $(OBJECTS)
