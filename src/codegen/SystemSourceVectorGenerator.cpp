@@ -29,6 +29,7 @@ along with LB-LMC Solver C++ Code Generation Library.  If not, see <https://www.
 #include <string>
 #include <sstream>
 #include <stdexcept>
+#include <iostream>
 
 namespace lblmc
 {
@@ -109,11 +110,11 @@ unsigned int SystemSourceVectorGenerator::insertSource(unsigned int npos, unsign
 
 	if(npos != 0)
 	{
-		vector[npos-1].push_back(+src_index);
+		vector[npos-1].push_back(+abs(src_index));
 	}
 	if(nneg != 0)
 	{
-		vector[nneg-1].push_back(-src_index);
+		vector[nneg-1].push_back(-abs(src_index));
 	}
 
 	source_nodes[src_index].push_back(npos);
