@@ -15,4 +15,4 @@ g++ -std=c++14 -Wall -Wextra -g -MP -MMD -c RLC_Circuit.cpp -o RLC_Circuit.o && 
 ```
 plot "sim_data.csv" using 1:4 with linespoints title 'Inductor current'
 ```
-![Inductor Current][inductor_current.png]
+![Inductor Current][./inductor_current.png]
