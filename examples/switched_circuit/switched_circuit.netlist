@@ -1,0 +1,13 @@
+#name switched_circuit 
+#const DT 50.0e-9 
+#const V 100.0 
+#const RV 0.001 
+#const R 10.0 
+#const L2 1e-3 
+#const R2 10.0
+#const C 1e-6
+
+VoltageSource Vs (V ,RV) {1, 0} 
+SeriesRLIdealSwitch SW (DT, L2, R2) {1, 2}
+Resistor Res (R) {2, 0} 
+Capacitor Cap (DT, C) {2, 0}
