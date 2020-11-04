@@ -1,5 +1,8 @@
 ## Switched RLC Circuit
 
+### Netlist
+![Circuit for netlist][./switched_circuit_netlist.png]
+
 ### Offline C++ simulation
 1. Compile simulation,
 ```bash
