@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
-  <source/>
+  <source>
+    <originFiles name="RLC_Circuit.hpp" path="/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/RLC_Circuit.hpp"/>
+  </source>
   <testbench/>
 </autopilotfilemapping:AutoPilotFileMapping>

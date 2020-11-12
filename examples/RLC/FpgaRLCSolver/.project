@@ -37,6 +37,11 @@
 			<location>/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/.apc/.tb</location>
 		</link>
 		<link>
+			<name>source/RLC_Circuit.hpp</name>
+			<type>1</type>
+			<location>/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/RLC_Circuit.hpp</location>
+		</link>
+		<link>
 			<name>vc707/constraints</name>
 			<type>2</type>
 			<location>/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/vc707/.tcls</location>

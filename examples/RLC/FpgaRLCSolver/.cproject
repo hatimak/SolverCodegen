@@ -70,6 +70,8 @@
                                     <listOptionValue builtIn="false" value="AESL_TB"/>
                                     									
                                     <listOptionValue builtIn="false" value="__llvm__"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="__llvm__"/>
                                     								
                                 </option>
                                 								
@@ -102,6 +104,8 @@
                                 <option id="gnu.c.compiler.option.preprocessor.def.symbols.1150548913" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
                                     									
                                     <listOptionValue builtIn="false" value="AESL_TB"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="__llvm__"/>
                                     									
                                     <listOptionValue builtIn="false" value="__llvm__"/>
                                     								
@@ -159,7 +163,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding="*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding="vc707|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
@@ -311,7 +315,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding="*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding="vc707|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				

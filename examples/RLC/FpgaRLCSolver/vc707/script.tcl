@@ -4,6 +4,7 @@
 ## Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project FpgaRLCSolver
+add_files FpgaRLCSolver/RLC_Circuit.hpp
 open_solution "vc707"
 set_part {xc7vx485tffg1761-2} -tool vivado
 create_clock -period 50ns -name default
