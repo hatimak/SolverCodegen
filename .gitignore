@@ -33,3 +33,12 @@
 
 # Build directories
 build/
+
+# Simulation dumps
+*.csv
+
+.vscode
+*.plist
+.DS_Store
+.clang-format
+
