@@ -37,9 +37,24 @@
 			<location>/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/.apc/.tb</location>
 		</link>
 		<link>
+			<name>.reference/ap_fixed.h</name>
+			<type>1</type>
+			<location>/opt/Xilinx/Vivado/2018.3/include/ap_fixed.h</location>
+		</link>
+		<link>
 			<name>source/RLC_Circuit.hpp</name>
 			<type>1</type>
 			<location>/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/RLC_Circuit.hpp</location>
+		</link>
+		<link>
+			<name>source/RLC_CircuitCore.cpp</name>
+			<type>1</type>
+			<location>/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/RLC_CircuitCore.cpp</location>
+		</link>
+		<link>
+			<name>source/RLC_CircuitCore.hpp</name>
+			<type>1</type>
+			<location>/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/RLC_CircuitCore.hpp</location>
 		</link>
 		<link>
 			<name>vc707/constraints</name>

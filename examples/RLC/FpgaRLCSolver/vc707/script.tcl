@@ -5,6 +5,8 @@
 ############################################################
 open_project FpgaRLCSolver
 add_files FpgaRLCSolver/RLC_Circuit.hpp
+add_files FpgaRLCSolver/RLC_CircuitCore.cpp
+add_files FpgaRLCSolver/RLC_CircuitCore.hpp
 open_solution "vc707"
 set_part {xc7vx485tffg1761-2} -tool vivado
 create_clock -period 50ns -name default

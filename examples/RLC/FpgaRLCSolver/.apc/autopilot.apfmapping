@@ -2,6 +2,8 @@
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
     <originFiles name="RLC_Circuit.hpp" path="/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/RLC_Circuit.hpp"/>
+    <originFiles name="RLC_CircuitCore.cpp" path="/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/RLC_CircuitCore.cpp"/>
+    <originFiles name="RLC_CircuitCore.hpp" path="/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/RLC_CircuitCore.hpp"/>
   </source>
   <testbench/>
 </autopilotfilemapping:AutoPilotFileMapping>
