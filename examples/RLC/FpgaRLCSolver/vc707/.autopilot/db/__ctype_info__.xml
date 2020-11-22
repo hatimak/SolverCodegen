@@ -1,0 +1,33 @@
+<InterfaceSummary>
+<RtlPorts>
+<name>x_out_0_V</name>
+<CType>
+<TypeName>ap_fixed 64 24 0 3 0</TypeName>
+<TypeWidth>64</TypeWidth>
+<PhysicalWidth>64</PhysicalWidth>
+</CType>
+<CFractionWidth>40</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>x_out_1_V</name>
+<CType>
+<TypeName>ap_fixed 64 24 0 3 0</TypeName>
+<TypeWidth>64</TypeWidth>
+<PhysicalWidth>64</PhysicalWidth>
+</CType>
+<CFractionWidth>40</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>l_current_ind_V</name>
+<CType>
+<TypeName>ap_fixed 64 24 0 3 0</TypeName>
+<TypeWidth>64</TypeWidth>
+<PhysicalWidth>64</PhysicalWidth>
+</CType>
+<CFractionWidth>40</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+</InterfaceSummary>
+

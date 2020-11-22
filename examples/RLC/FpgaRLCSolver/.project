@@ -57,6 +57,16 @@
 			<location>/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/RLC_CircuitCore.hpp</location>
 		</link>
 		<link>
+			<name>testbench/DataLogger.hpp</name>
+			<type>1</type>
+			<location>/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/DataLogger.hpp</location>
+		</link>
+		<link>
+			<name>testbench/RLC_CircuitCore_tb.cpp</name>
+			<type>1</type>
+			<location>/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/RLC_CircuitCore_tb.cpp</location>
+		</link>
+		<link>
 			<name>vc707/constraints</name>
 			<type>2</type>
 			<location>/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/vc707/.tcls</location>

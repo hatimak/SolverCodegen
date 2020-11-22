@@ -9,7 +9,7 @@
     #include <ap_fixed.h> // include Xilinx Vivado HLS's ap_fixed definitions
 
     #define FP_WORD_SIZE 64 // Word size of fixed point real type in bits
-    #define FP_INT_SIZE 32  // Integral size of fixed point real type in bits
+    #define FP_INT_SIZE 24  // Integral size of fixed point real type in bits
     #define FP_FRAC_SIZE (FP_WORD_SIZE-FP_INT_SIZE) // Fractional size of fixed point real type in bits
 
     typedef ap_fixed<FP_WORD_SIZE, FP_INT_SIZE, AP_RND> real;

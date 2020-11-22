@@ -1,0 +1,183 @@
+
+
+================================================================
+== Vivado HLS Report for 'RLC_Circuit_solverCore'
+================================================================
+* Date:           Sun Nov 22 01:23:52 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        FpgaRLCSolver
+* Solution:       vc707
+* Product family: virtex7
+* Target device:  xc7vx485tffg1761-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  50.00|    31.023|        6.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 31.0>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64* %x_out_1_V), !map !75"   --->   Operation 2 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64* %x_out_0_V), !map !81"   --->   Operation 3 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64* %l_current_ind_V), !map !87"   --->   Operation 4 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([23 x i8]* @RLC_Circuit_solverCo) nounwind"   --->   Operation 5 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLatency(i32 0, i32 0, [1 x i8]* @p_str1) nounwind" [FpgaRLCSolver/RLC_CircuitCore.cpp:9]   --->   Operation 6 'speclatency' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([14 x i8]* @p_str2)" [FpgaRLCSolver/RLC_CircuitCore.cpp:11]   --->   Operation 7 'specregionbegin' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecProtocol(i32 0, [1 x i8]* @p_str1) nounwind" [FpgaRLCSolver/RLC_CircuitCore.cpp:12]   --->   Operation 8 'specprotocol' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%x_V_1_load = load i57* @x_V_1, align 8"   --->   Operation 9 'load' 'x_V_1_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%tmp_2 = trunc i57 %x_V_1_load to i56" [FpgaRLCSolver/RLC_Circuit.hpp:59->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 10 'trunc' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%x_V_2_load = load i51* @x_V_2, align 8"   --->   Operation 11 'load' 'x_V_2_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%p_Val2_1_cast = sext i51 %x_V_2_load to i56" [FpgaRLCSolver/RLC_Circuit.hpp:60->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 12 'sext' 'p_Val2_1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%p_Val2_1 = load i64* @current_eq_ind_V, align 8" [FpgaRLCSolver/RLC_Circuit.hpp:60->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 13 'load' 'p_Val2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (1.69ns)   --->   "%tmp_s = sub i56 %tmp_2, %p_Val2_1_cast" [FpgaRLCSolver/RLC_Circuit.hpp:61->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 14 'sub' 'tmp_s' <Predicate = true> <Delay = 1.69> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_1_cast_cast = sext i56 %tmp_s to i80" [FpgaRLCSolver/RLC_Circuit.hpp:62->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 15 'sext' 'tmp_1_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (7.63ns)   --->   "%r_V_6 = mul i80 27487791, %tmp_1_cast_cast" [FpgaRLCSolver/RLC_Circuit.hpp:62->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 16 'mul' 'r_V_6' <Predicate = true> <Delay = 7.63> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.18> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%lhs_V_cast = sext i80 %r_V_6 to i105" [FpgaRLCSolver/RLC_Circuit.hpp:62->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 17 'sext' 'lhs_V_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%rhs_V = call i104 @_ssdm_op_BitConcatenate.i104.i64.i40(i64 %p_Val2_1, i40 0)" [FpgaRLCSolver/RLC_Circuit.hpp:62->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 18 'bitconcatenate' 'rhs_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%rhs_V_1_cast = sext i104 %rhs_V to i105" [FpgaRLCSolver/RLC_Circuit.hpp:62->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 19 'sext' 'rhs_V_1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (2.28ns)   --->   "%ret_V = sub i105 %lhs_V_cast, %rhs_V_1_cast" [FpgaRLCSolver/RLC_Circuit.hpp:62->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 20 'sub' 'ret_V' <Predicate = true> <Delay = 2.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_Val2_3 = call i64 @_ssdm_op_PartSelect.i64.i105.i32.i32(i105 %ret_V, i32 40, i32 103)" [FpgaRLCSolver/RLC_Circuit.hpp:62->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 21 'partselect' 'p_Val2_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_3 = call i1 @_ssdm_op_BitSelect.i1.i105.i32(i105 %ret_V, i32 39)" [FpgaRLCSolver/RLC_Circuit.hpp:62->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 22 'bitselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_5_cast = zext i1 %tmp_3 to i64" [FpgaRLCSolver/RLC_Circuit.hpp:62->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 23 'zext' 'tmp_5_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (1.81ns)   --->   "%p_Val2_4 = add nsw i64 %tmp_5_cast, %p_Val2_3" [FpgaRLCSolver/RLC_Circuit.hpp:62->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 24 'add' 'p_Val2_4' <Predicate = true> <Delay = 1.81> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%r_V = sext i64 %p_Val2_4 to i65" [FpgaRLCSolver/RLC_Circuit.hpp:63->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 25 'sext' 'r_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (1.81ns)   --->   "%r_V_7 = sub nsw i65 0, %r_V" [FpgaRLCSolver/RLC_Circuit.hpp:63->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 26 'sub' 'r_V_7' <Predicate = true> <Delay = 1.81> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%lhs_V = call i105 @_ssdm_op_BitConcatenate.i105.i65.i40(i65 %r_V_7, i40 0)" [FpgaRLCSolver/RLC_Circuit.hpp:63->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 27 'bitconcatenate' 'lhs_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (2.29ns)   --->   "%ret_V_1 = sub i105 %lhs_V, %lhs_V_cast" [FpgaRLCSolver/RLC_Circuit.hpp:63->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 28 'sub' 'ret_V_1' <Predicate = true> <Delay = 2.29> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%p_Val2_7 = call i64 @_ssdm_op_PartSelect.i64.i105.i32.i32(i105 %ret_V_1, i32 40, i32 103)" [FpgaRLCSolver/RLC_Circuit.hpp:63->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 29 'partselect' 'p_Val2_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_4 = call i1 @_ssdm_op_BitSelect.i1.i105.i32(i105 %ret_V_1, i32 39)" [FpgaRLCSolver/RLC_Circuit.hpp:63->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 30 'bitselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_9_cast = zext i1 %tmp_4 to i64" [FpgaRLCSolver/RLC_Circuit.hpp:63->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 31 'zext' 'tmp_9_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (1.81ns)   --->   "%p_Val2_8 = add nsw i64 %tmp_9_cast, %p_Val2_7" [FpgaRLCSolver/RLC_Circuit.hpp:63->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 32 'add' 'p_Val2_8' <Predicate = true> <Delay = 1.81> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "store i64 %p_Val2_8, i64* @current_eq_ind_V, align 8" [FpgaRLCSolver/RLC_Circuit.hpp:63->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 33 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%p_Val2_9 = load i64* @current_eq_cap_V, align 8" [FpgaRLCSolver/RLC_Circuit.hpp:68->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 34 'load' 'p_Val2_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_10_cast = sext i51 %x_V_2_load to i104" [FpgaRLCSolver/RLC_Circuit.hpp:70->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 35 'sext' 'tmp_10_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (7.76ns)   --->   "%r_V_s = mul i104 43980465111040000, %tmp_10_cast" [FpgaRLCSolver/RLC_Circuit.hpp:70->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 36 'mul' 'r_V_s' <Predicate = true> <Delay = 7.76> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.18> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%rhs_V_1 = call i104 @_ssdm_op_BitConcatenate.i104.i64.i40(i64 %p_Val2_9, i40 0)" [FpgaRLCSolver/RLC_Circuit.hpp:70->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 37 'bitconcatenate' 'rhs_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (2.28ns)   --->   "%ret_V_2 = sub i104 %r_V_s, %rhs_V_1" [FpgaRLCSolver/RLC_Circuit.hpp:70->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 38 'sub' 'ret_V_2' <Predicate = true> <Delay = 2.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_1 = call i64 @_ssdm_op_PartSelect.i64.i104.i32.i32(i104 %ret_V_2, i32 40, i32 103)" [FpgaRLCSolver/RLC_Circuit.hpp:70->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 39 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%lhs_V_1 = call i104 @_ssdm_op_BitConcatenate.i104.i64.i40(i64 %tmp_1, i40 0)" [FpgaRLCSolver/RLC_Circuit.hpp:71->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 40 'bitconcatenate' 'lhs_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (2.28ns)   --->   "%ret_V_3 = add i104 %lhs_V_1, %r_V_s" [FpgaRLCSolver/RLC_Circuit.hpp:71->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 41 'add' 'ret_V_3' <Predicate = true> <Delay = 2.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%p_Val2_12 = call i64 @_ssdm_op_PartSelect.i64.i104.i32.i32(i104 %ret_V_3, i32 40, i32 103)" [FpgaRLCSolver/RLC_Circuit.hpp:71->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 42 'partselect' 'p_Val2_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "store i64 %p_Val2_12, i64* @current_eq_cap_V, align 8" [FpgaRLCSolver/RLC_Circuit.hpp:71->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 43 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i64P(i64* %l_current_ind_V, i64 %p_Val2_4)" [FpgaRLCSolver/RLC_Circuit.hpp:76->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 44 'write' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (1.81ns)   --->   "%tmp_5 = add i64 109951162777600000, %p_Val2_8" [FpgaRLCSolver/RLC_Circuit.hpp:80->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 45 'add' 'tmp_5' <Predicate = true> <Delay = 1.81> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 46 [1/1] (1.81ns)   --->   "%tmp_7 = sub i64 %p_Val2_12, %p_Val2_8" [FpgaRLCSolver/RLC_Circuit.hpp:81->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 46 'sub' 'tmp_7' <Predicate = true> <Delay = 1.81> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_15_cast = sext i64 %tmp_5 to i95" [FpgaRLCSolver/RLC_Circuit.hpp:86->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 47 'sext' 'tmp_15_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (8.18ns)   --->   "%r_V_8 = mul i95 1099511600, %tmp_15_cast" [FpgaRLCSolver/RLC_Circuit.hpp:86->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 48 'mul' 'r_V_8' <Predicate = true> <Delay = 8.18> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.18> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_6 = call i55 @_ssdm_op_PartSelect.i55.i95.i32.i32(i95 %r_V_8, i32 40, i32 94)" [FpgaRLCSolver/RLC_Circuit.hpp:86->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 49 'partselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%p_Val2_17_cast = sext i55 %tmp_6 to i56" [FpgaRLCSolver/RLC_Circuit.hpp:86->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 50 'sext' 'p_Val2_17_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%tmp_8 = call i1 @_ssdm_op_BitSelect.i1.i95.i32(i95 %r_V_8, i32 39)" [FpgaRLCSolver/RLC_Circuit.hpp:86->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 51 'bitselect' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_19_cast_cast = zext i1 %tmp_8 to i56" [FpgaRLCSolver/RLC_Circuit.hpp:86->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 52 'zext' 'tmp_19_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (1.67ns)   --->   "%p_Val2_14 = add i56 %tmp_19_cast_cast, %p_Val2_17_cast" [FpgaRLCSolver/RLC_Circuit.hpp:86->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 53 'add' 'p_Val2_14' <Predicate = true> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%p_Val2_18_cast = sext i56 %p_Val2_14 to i64" [FpgaRLCSolver/RLC_Circuit.hpp:86->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 54 'sext' 'p_Val2_18_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%p_Val2_18_cast_cas = sext i56 %p_Val2_14 to i57" [FpgaRLCSolver/RLC_Circuit.hpp:86->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 55 'sext' 'p_Val2_18_cast_cas' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "store i57 %p_Val2_18_cast_cas, i57* @x_V_1, align 8" [FpgaRLCSolver/RLC_Circuit.hpp:86->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 56 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%tmp_20_cast = sext i64 %tmp_7 to i89" [FpgaRLCSolver/RLC_Circuit.hpp:87->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 57 'sext' 'tmp_20_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (8.18ns)   --->   "%r_V_9 = mul i89 27487722, %tmp_20_cast" [FpgaRLCSolver/RLC_Circuit.hpp:87->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 58 'mul' 'r_V_9' <Predicate = true> <Delay = 8.18> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.18> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%tmp_9 = call i49 @_ssdm_op_PartSelect.i49.i89.i32.i32(i89 %r_V_9, i32 40, i32 88)" [FpgaRLCSolver/RLC_Circuit.hpp:87->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 59 'partselect' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%p_Val2_20_cast = sext i49 %tmp_9 to i50" [FpgaRLCSolver/RLC_Circuit.hpp:87->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 60 'sext' 'p_Val2_20_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_10 = call i1 @_ssdm_op_BitSelect.i1.i89.i32(i89 %r_V_9, i32 39)" [FpgaRLCSolver/RLC_Circuit.hpp:87->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 61 'bitselect' 'tmp_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_24_cast_cast = zext i1 %tmp_10 to i50" [FpgaRLCSolver/RLC_Circuit.hpp:87->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 62 'zext' 'tmp_24_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (1.59ns)   --->   "%p_Val2_16 = add i50 %tmp_24_cast_cast, %p_Val2_20_cast" [FpgaRLCSolver/RLC_Circuit.hpp:87->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 63 'add' 'p_Val2_16' <Predicate = true> <Delay = 1.59> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%p_Val2_21_cast = sext i50 %p_Val2_16 to i64" [FpgaRLCSolver/RLC_Circuit.hpp:87->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 64 'sext' 'p_Val2_21_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%p_Val2_21_cast_cas = sext i50 %p_Val2_16 to i51" [FpgaRLCSolver/RLC_Circuit.hpp:87->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 65 'sext' 'p_Val2_21_cast_cas' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "store i51 %p_Val2_21_cast_cas, i51* @x_V_2, align 8" [FpgaRLCSolver/RLC_Circuit.hpp:87->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 66 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i64P(i64* %x_out_0_V, i64 %p_Val2_18_cast)" [FpgaRLCSolver/RLC_Circuit.hpp:89->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 67 'write' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i64P(i64* %x_out_1_V, i64 %p_Val2_21_cast)" [FpgaRLCSolver/RLC_Circuit.hpp:90->FpgaRLCSolver/RLC_CircuitCore.cpp:14]   --->   Operation 68 'write' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([14 x i8]* @p_str2, i32 %tmp)" [FpgaRLCSolver/RLC_CircuitCore.cpp:15]   --->   Operation 69 'specregionend' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "ret void" [FpgaRLCSolver/RLC_CircuitCore.cpp:16]   --->   Operation 70 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 50ns, clock uncertainty: 6.25ns.
+
+ <State 1>: 31ns
+The critical path consists of the following:
+	'load' operation ('x_V_1_load') on static variable 'x_V_1' [15]  (0 ns)
+	'sub' operation ('tmp_s', FpgaRLCSolver/RLC_Circuit.hpp:61->FpgaRLCSolver/RLC_CircuitCore.cpp:14) [20]  (1.69 ns)
+	'mul' operation ('r.V', FpgaRLCSolver/RLC_Circuit.hpp:62->FpgaRLCSolver/RLC_CircuitCore.cpp:14) [22]  (7.63 ns)
+	'sub' operation ('ret.V', FpgaRLCSolver/RLC_Circuit.hpp:62->FpgaRLCSolver/RLC_CircuitCore.cpp:14) [26]  (2.29 ns)
+	'add' operation ('__Val2__', FpgaRLCSolver/RLC_Circuit.hpp:62->FpgaRLCSolver/RLC_CircuitCore.cpp:14) [30]  (1.81 ns)
+	'sub' operation ('r.V', FpgaRLCSolver/RLC_Circuit.hpp:63->FpgaRLCSolver/RLC_CircuitCore.cpp:14) [32]  (1.81 ns)
+	'sub' operation ('ret.V', FpgaRLCSolver/RLC_Circuit.hpp:63->FpgaRLCSolver/RLC_CircuitCore.cpp:14) [34]  (2.3 ns)
+	'add' operation ('__Val2__', FpgaRLCSolver/RLC_Circuit.hpp:63->FpgaRLCSolver/RLC_CircuitCore.cpp:14) [38]  (1.81 ns)
+	'add' operation ('tmp_5', FpgaRLCSolver/RLC_Circuit.hpp:80->FpgaRLCSolver/RLC_CircuitCore.cpp:14) [51]  (1.81 ns)
+	'mul' operation ('r.V', FpgaRLCSolver/RLC_Circuit.hpp:86->FpgaRLCSolver/RLC_CircuitCore.cpp:14) [54]  (8.18 ns)
+	'add' operation ('__Val2__', FpgaRLCSolver/RLC_Circuit.hpp:86->FpgaRLCSolver/RLC_CircuitCore.cpp:14) [59]  (1.68 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

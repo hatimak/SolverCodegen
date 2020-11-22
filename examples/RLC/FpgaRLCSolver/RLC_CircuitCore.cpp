@@ -3,7 +3,7 @@
 
 
 void RLC_Circuit_solverCore(real x_out[2], real *l_current_ind) {
-    #pragma HLS ARRAY_PARTITION variable=xout dim=1
+    #pragma HLS ARRAY_PARTITION variable=x_out dim=1
     #pragma HLS INLINE RECURSIVE
 
     #pragma HLS latency min=0 max=0

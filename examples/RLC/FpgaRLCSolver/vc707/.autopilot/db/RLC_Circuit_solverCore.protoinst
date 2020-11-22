@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"RLC_Circuit_solverCore": {
+			"proto_instances": {
+			}
+		}
+	}
+}

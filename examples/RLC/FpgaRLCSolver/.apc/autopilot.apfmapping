@@ -5,5 +5,8 @@
     <originFiles name="RLC_CircuitCore.cpp" path="/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/RLC_CircuitCore.cpp"/>
     <originFiles name="RLC_CircuitCore.hpp" path="/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/RLC_CircuitCore.hpp"/>
   </source>
-  <testbench/>
+  <testbench>
+    <originFiles name="DataLogger.hpp" path="/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/DataLogger.hpp"/>
+    <originFiles name="RLC_CircuitCore_tb.cpp" path="/local-home/svg-hka/fzj/jugit/SolverCodegen/examples/RLC/FpgaRLCSolver/RLC_CircuitCore_tb.cpp"/>
+  </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
